@@ -1,14 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans">
 
-    <bean id="bookService"
-          class="mozell.study.springCore.book2.BookService">
-        <property name="bookRepository" ref="bookRepository"/>
-    </bean>
-          
-    <bean id="bookRepository"
-          class="mozell.study.springCore.book2.BookRepository"/>
+    <context:component-scan base-package="mozell.study.springCore"/>
 
 </beans>
