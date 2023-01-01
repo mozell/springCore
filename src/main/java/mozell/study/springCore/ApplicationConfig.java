@@ -1,8 +1,5 @@
 package mozell.study.springCore;
 
-import mozell.study.springCore.book2.BookRepository;
-import mozell.study.springCore.book2.BookService;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 

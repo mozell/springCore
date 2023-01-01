@@ -8,17 +8,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Arrays;
 
-//@SpringBootApplication
+@SpringBootApplication
 public class SpringCoreApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(SpringCoreApplication.class, args);
-
-		ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class);
-
-//		ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
-		String[] beanDefinitionNames = context.getBeanDefinitionNames();
-		System.out.println(Arrays.toString(beanDefinitionNames));
+		SpringApplication.run(SpringCoreApplication.class, args);
 	}
 
 }
