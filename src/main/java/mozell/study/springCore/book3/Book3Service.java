@@ -9,4 +9,8 @@ public class Book3Service {
     @Autowired
     Book3Repository bookRepository;
 
+    public void printBook3Repository() {
+        System.out.println(bookRepository.getClass());
+    }
+
 }
