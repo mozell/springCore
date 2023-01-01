@@ -6,10 +6,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class Book3Service {
 
+    @Autowired(required = false)
     Book3Repository bookRepository;
 
-    @Autowired(required = false)
-    public void setBookRepository(Book3Repository bookRepository) {
-        this.bookRepository = bookRepository;
-    }
 }
