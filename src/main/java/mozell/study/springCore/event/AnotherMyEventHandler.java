@@ -7,12 +7,12 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MyEventHandler {
+public class AnotherMyEventHandler {
 
     @EventListener
     @Async
-    public void handle(MyEvent event) {
+    public void handle(MyEvent myEvent) {
         System.out.println(Thread.currentThread().toString());
-        System.out.println("이벤트 받았고, 그 데이터는 "+event.getData());
+        System.out.println("Another "+myEvent.getData());
     }
 }
