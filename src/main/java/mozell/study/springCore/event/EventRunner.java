@@ -15,6 +15,6 @@ public class EventRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        eventPublisher.publishEvent(new MyEvent(this, 100));
+//        eventPublisher.publishEvent(new MyEvent(this, 100));
     }
 }
