@@ -16,7 +16,10 @@ public class MessageSourceRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println(messageSource.getMessage("greeting", new String[]{"mozell"}, Locale.KOREA));
-        System.out.println(messageSource.getMessage("greeting", new String[]{"mozell"}, Locale.getDefault()));
+        while (true) {
+            System.out.println(messageSource.getMessage("greeting", new String[]{"mozell"}, Locale.KOREA));
+            System.out.println(messageSource.getMessage("greeting", new String[]{"mozell"}, Locale.getDefault()));
+            Thread.sleep(1000l);
+        }
     }
 }
