@@ -20,11 +20,11 @@ public class ProfileRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        Environment environment = ctx.getEnvironment();
-        System.out.println(Arrays.toString(environment.getActiveProfiles()));
-        System.out.println(Arrays.toString(environment.getDefaultProfiles()));
-
-        System.out.println(environment.getProperty("app.name"));
-        System.out.println(environment.getProperty("app.about"));
+//        Environment environment = ctx.getEnvironment();
+//        System.out.println(Arrays.toString(environment.getActiveProfiles()));
+//        System.out.println(Arrays.toString(environment.getDefaultProfiles()));
+//
+//        System.out.println(environment.getProperty("app.name"));
+//        System.out.println(environment.getProperty("app.about"));
     }
 }

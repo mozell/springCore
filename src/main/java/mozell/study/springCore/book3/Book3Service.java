@@ -13,7 +13,7 @@ public class Book3Service {
     List<Book3Repository> book3Repositories;
 
     public void printBook3Repository() {
-        this.book3Repositories.forEach(System.out::println);
+//        this.book3Repositories.forEach(System.out::println);
     }
 
 }
