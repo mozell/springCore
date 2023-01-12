@@ -15,15 +15,11 @@ import java.nio.file.Path;
 public class ResourceLoaderRunner implements ApplicationRunner {
 
     @Autowired
-    ApplicationContext resourceLoader;
+    ResourceLoader resourceLoader;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println(resourceLoader.getClass()); // ~~WebApplicationContext
-
         Resource resource = resourceLoader.getResource("classpath:test.txt");
-        System.out.println(resource.getClass()); // 원래는 ServletContextResource 여야 하는데, 리소스 타입을 강제로 명시했으니, ClassPathResource 이다.
-
         System.out.println(resource.exists());
         System.out.println(resource.getDescription());
         System.out.println(Files.readString(Path.of(resource.getURI())));
