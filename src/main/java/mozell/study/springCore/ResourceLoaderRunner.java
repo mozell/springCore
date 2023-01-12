@@ -11,6 +11,7 @@ import org.springframework.core.io.ResourceLoader;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.Errors;
+import org.springframework.validation.Validator;
 
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -19,13 +20,17 @@ import java.util.Arrays;
 @Component
 public class ResourceLoaderRunner implements ApplicationRunner {
 
+    @Autowired
+    Validator validator;
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
+        System.out.println(validator.getClass());
+
         Event event = new Event();
-        EventValidator eventValidator = new EventValidator();
         Errors errors = new BeanPropertyBindingResult(event, "event");
 
-        eventValidator.validate(event, errors);
+        validator.validate(event, errors);
 
         System.out.println(errors.hasErrors());
 
