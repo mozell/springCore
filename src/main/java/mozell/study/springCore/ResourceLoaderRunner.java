@@ -25,19 +25,19 @@ public class ResourceLoaderRunner implements ApplicationRunner {
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        System.out.println(validator.getClass());
-
-        Event event = new Event();
-        Errors errors = new BeanPropertyBindingResult(event, "event");
-
-        validator.validate(event, errors);
-
-        System.out.println(errors.hasErrors());
-
-        errors.getAllErrors().forEach( e -> {
-            System.out.println("======== error coed ========");
-            Arrays.stream(e.getCodes()).forEach(System.out::println);
-            System.out.println(e.getDefaultMessage());
-        });
+//        System.out.println(validator.getClass());
+//
+//        Event event = new Event();
+//        Errors errors = new BeanPropertyBindingResult(event, "event");
+//
+//        validator.validate(event, errors);
+//
+//        System.out.println(errors.hasErrors());
+//
+//        errors.getAllErrors().forEach( e -> {
+//            System.out.println("======== error coed ========");
+//            Arrays.stream(e.getCodes()).forEach(System.out::println);
+//            System.out.println(e.getDefaultMessage());
+//        });
     }
 }
