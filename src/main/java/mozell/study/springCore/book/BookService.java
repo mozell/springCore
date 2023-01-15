@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 import javax.annotation.PostConstruct;
 import java.util.Date;
 
-@Service
+//@Service
 public class BookService {
 
     private BookRepository bookRepository;

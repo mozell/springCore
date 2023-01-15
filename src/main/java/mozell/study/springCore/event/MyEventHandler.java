@@ -9,7 +9,7 @@ import org.springframework.core.annotation.Order;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class MyEventHandler {
 
     @EventListener

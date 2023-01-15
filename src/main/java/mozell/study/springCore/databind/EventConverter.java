@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 public class EventConverter {
 
-    @Component
+//    @Component
     public static class StringToEventConverter implements Converter<String, Event> {
         @Override
         public Event convert(String source) {
