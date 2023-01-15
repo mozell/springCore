@@ -3,6 +3,10 @@ package mozell.study.springCore.spel;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
+import org.springframework.expression.Expression;
+import org.springframework.expression.ExpressionParser;
+import org.springframework.expression.spel.standard.SpelExpressionParser;
+import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -41,5 +45,13 @@ public class SpELRunner implements ApplicationRunner {
         System.out.println(myValue2);
         System.out.println("=Bean Reference=");
         System.out.println(sampleData);
+
+        System.out.println("===============");
+        ExpressionParser parser = new SpelExpressionParser();
+        Expression expression = parser.parseExpression("2+100");
+//        StandardEvaluationContext context = new StandardEvaluationContext(bean);
+        Integer expressionValue = expression.getValue(Integer.class);
+        System.out.println(expressionValue);
+
     }
 }
