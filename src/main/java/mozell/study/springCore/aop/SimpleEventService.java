@@ -2,7 +2,7 @@ package mozell.study.springCore.aop;
 
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public class SimpleEventService implements EventService {
 
     @PerfLogging

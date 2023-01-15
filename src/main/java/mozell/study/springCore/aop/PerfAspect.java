@@ -5,8 +5,8 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
 
-@Component
-@Aspect
+//@Component
+//@Aspect
 public class PerfAspect {
 
 //    @Around("execution(* mozell.study..*.EventService.*(..))") // *(..) : 전체 메소드 적용
