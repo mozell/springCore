@@ -26,6 +26,9 @@ public class SpELRunner implements ApplicationRunner {
     @Value("#{${my.value} +100}")
     int myValue2;
 
+    @Value("#{sample.data}")
+    int sampleData; // Bean Reference
+
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
@@ -36,5 +39,7 @@ public class SpELRunner implements ApplicationRunner {
         System.out.println(hello);
         System.out.println(myValue);
         System.out.println(myValue2);
+        System.out.println("=Bean Reference=");
+        System.out.println(sampleData);
     }
 }
