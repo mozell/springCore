@@ -17,7 +17,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Arrays;
 
-@Component
+//@Component
 public class ResourceLoaderRunner implements ApplicationRunner {
 
     @Autowired

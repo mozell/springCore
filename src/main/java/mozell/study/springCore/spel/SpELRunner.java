@@ -30,7 +30,7 @@ public class SpELRunner implements ApplicationRunner {
     @Value("#{${my.value} +100}")
     int myValue2;
 
-    @Value("#{sample.data}")
+//    @Value("#{sample.data}")
     int sampleData; // Bean Reference
 
     @Override
