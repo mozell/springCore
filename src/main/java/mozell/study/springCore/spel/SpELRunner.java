@@ -36,22 +36,22 @@ public class SpELRunner implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 
-        System.out.println("===============");
-        System.out.println(value);
-        System.out.println(greeting);
-        System.out.println(tf);
-        System.out.println(hello);
-        System.out.println(myValue);
-        System.out.println(myValue2);
-        System.out.println("=Bean Reference=");
-        System.out.println(sampleData);
-
-        System.out.println("===============");
-        ExpressionParser parser = new SpelExpressionParser();
-        Expression expression = parser.parseExpression("2+100");
-//        StandardEvaluationContext context = new StandardEvaluationContext(bean);
-        Integer expressionValue = expression.getValue(Integer.class);
-        System.out.println(expressionValue);
+//        System.out.println("===============");
+//        System.out.println(value);
+//        System.out.println(greeting);
+//        System.out.println(tf);
+//        System.out.println(hello);
+//        System.out.println(myValue);
+//        System.out.println(myValue2);
+//        System.out.println("=Bean Reference=");
+//        System.out.println(sampleData);
+//
+//        System.out.println("===============");
+//        ExpressionParser parser = new SpelExpressionParser();
+//        Expression expression = parser.parseExpression("2+100");
+////        StandardEvaluationContext context = new StandardEvaluationContext(bean);
+//        Integer expressionValue = expression.getValue(Integer.class);
+//        System.out.println(expressionValue);
 
     }
 }
